@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>글쓰기 폼</title>
+    <link rel="stylesheet" href="writeform.css">
+</head>
+
+<body>
+<h2>글쓰기</h2>
+<form action="/write" method="post">
+    <!-- 이름 : 세션에서 읽어들임-->
+    글쓴이 : <span th:text="${loginInfo.name}"></span><br>
+    제목 <input type="text" name="title" /><br />
+    내용<br>
+    <textarea name="content" cols="50" rows="5"></textarea><br>
+    <input type="submit" value="등록"/>
+</form>
+</body>
+</html>

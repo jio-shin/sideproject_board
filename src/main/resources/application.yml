@@ -1,0 +1,21 @@
+
+# ?? ?? ??
+server:
+  port: 8080
+
+# database ?? ??
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/joboard?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: jo
+    password: tlswldh97!!
+  thymeleaf:
+    cache: false
+
+  # spring data jpa ??
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update

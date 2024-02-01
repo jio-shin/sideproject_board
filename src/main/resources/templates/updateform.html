@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>글수정 폼</title>
+    <link rel="stylesheet" href="writeform.css">
+
+</head>
+
+<body>
+<h2>작성글 수정</h2>
+<form action="/update" method="post">
+    <input type="hidden" name="boardId" th:value="${board.boardId}"/>
+    이름: <span th:text="${loginInfo.name}"></span><br>
+    제목: <input type="text" name="title" th:value="${board.title}" /><br />
+    내용 :<br>
+    <textarea name="content" cols="50" rows="5" th:text="${board.content}"></textarea><br>
+    <input type="submit" value="수정"/>
+</form>
+</body>
+</html>
